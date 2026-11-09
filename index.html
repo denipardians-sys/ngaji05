@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NGAJI 05 - RW 05 Cilebut Barat</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2a0a4a">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#2a0a4a;color:#fff;padding-bottom:100px}
+.header{text-align:center;padding:22px 18px 8px}
+.header img{width:150px;height:150px;border-radius:50%;border:4px solid #f5c518;object-fit:cover;box-shadow:0 0 20px rgba(245,197,24,.6)}
+.header h1{font-size:28px;color:#f5c518;margin-top:10px}
+.header p{font-size:13px;color:#e8c9ff;margin-top:4px}
+.header .badge{display:inline-block;background:#f5c518;color:#000;padding:5px 12px;border-radius:20px;font-size:11px;font-weight:800;margin-top:10px}
+.beranda-title{text-align:center;padding:10px 0 0}
+.beranda-title h1{font-size:40px;font-weight:900}
+.beranda-title h2{font-size:20px;color:#f5c518}
+.beranda-title p{font-size:12px;color:#e8c9ff;margin-top:6px}
+.container{padding:14px}
+.card{background:#3a1060;border:1.5px solid #f5c518;border-radius:16px;padding:14px;margin-bottom:12px;display:flex;gap:12px;align-items:flex-start}
+.card .icon{font-size:34px;flex-shrink:0}
+.card h3{font-size:19px;color:#f5c518;line-height:1.2}
+.card p{font-size:13px;color:#f2e6ff;line-height:1.5;margin-top:4px}
+.badge2{margin-left:auto;background:#f5c518;color:#000;font-size:11px;font-weight:800;padding:6px 10px;border-radius:8px;text-align:center;flex-shrink:0;line-height:1.2}
+.arrow{margin-left:auto;color:#f5c518;font-size:20px}
+.btn{width:100%;padding:13px;border:0;border-radius:12px;background:#f5c518;color:#000;font-weight:800;font-size:14px;margin-top:10px}
+.btn-green{background:#0f5132;color:#fff}
+input,select,textarea{width:100%;padding:11px;border:1px solid #ddd;border-radius:10px;margin-top:6px;margin-bottom:10px;font-size:14px;background:#fff;color:#000}
+label{font-size:12px;font-weight:700;color:#f5c518}
+.white-card{background:#fff;color:#000;border-radius:16px;padding:16px;margin-bottom:12px}
+.white-card h3{color:#2a0a4a;font-size:16px;margin-bottom:8px}
+.white-card p{color:#444;font-size:13px;line-height:1.6}
+.dark-card{background:#3a1060;border:1.5px solid #f5c518;color:#fff;border-radius:16px;padding:16px;margin-bottom:12px}
+.dark-card h3{color:#f5c518;font-size:20px}
+.dark-card p{color:#fff;font-size:14px;line-height:1.8;margin-top:8px}
+.dark-card b{color:#f5c518}
+.pengurus-item{display:flex;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid #eee;color:#000}
+.pengurus-item:last-child{border:0}
+.avatar{width:44px;height:44px;border-radius:50%;background:#2a0a4a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.avatar.y{background:#f5c518;color:#000}
+.avatar.b{background:#0d6efd}
+.pengurus-item b{font-size:14px;display:block}
+.pengurus-item span{font-size:12px;color:#666}
+.section{font-size:12px;font-weight:800;color:#f5c518;margin:14px 0 8px;text-transform:uppercase}
+.nav{position:fixed;bottom:10px;left:10px;right:10px;background:#3a1060;border:1.5px solid #f5c518;border-radius:16px;display:flex;padding:10px 0;z-index:99}
+.nav button{flex:1;border:0;background:none;font-size:12px;color:#c9aaff;padding:4px}
+.nav button.active{color:#f5c518;font-weight:800}
+.nav button span{font-size:22px;display:block}
+.page{display:none}.page.active{display:block}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="icon.png" alt="NGAJI ampeg 05">
+  <h1>NGAJI 05</h1>
+  <p>RW 05 Cilebut Barat</p>
+
+<div class="beranda-title">
+  <h1>🏠 Beranda</h1>
+  <h2>Welcome Bos ampeg</h2>
+  <p>Warga • RW 05 Cilebut Barat</p>
+</div>
+
+<div class="container">
+
+<!-- BERANDA -->
+<div id="page-beranda" class="page active">
+  <div class="card">
+    <div class="icon">🕌</div>
+    <div><h3>Info Pengajian Hari Ini</h3><p>Pengajian Rutin Malam Jumat<br>Hari ini 19:30 WIB • Masjid Al-Huda</p></div>
+    <div class="badge2">HARI INI</div>
+  </div>
+  <div class="card" onclick="showPage('pengajian')">
+    <div class="icon">📅</div>
+    <div><h3>Jadwal Pengajian</h3><p>Lihat jadwal lengkap</p></div>
+    <div class="arrow">›</div>
+  </div>
+  <div class="card">
+    <div class="icon">📢</div>
+    <div><h3>Pengumuman RW 05</h3><p>Kerja Bakti Lingkungan Minggu Ini<br>Minggu 15 Okt • 07:00 WIB • Titik kumpul Pos RW 05</p></div>
+    <div class="badge2">RW & RT<br>AUTO ACC</div>
+  </div>
+  <div class="card">
+    <div class="icon">📄</div>
+    <div><h3>Info Umum Warga</h3><p>Belum ada info yang di-ACC Bos RW 05.<br>⏳ Harus ACC Bos RW 05 dulu baru tampil</p></div>
+  </div>
+  <!-- PETUGAS JUMAT DI BERANDA JUGA BOS AMPEG -->
+  <div class="dark-card">
+    <h3>🧕 Petugas Jum'at Hari Ini</h3>
+    <p>
+      <b>Tanggal : </b><span id="tanggal-jumat-beranda">....</span><br>
+      <b>IMAM :</b> <span id="imam-beranda">....</span><br>
+      <b>KHOTIB :</b> <span id="khotib-beranda">....</span><br>
+      <b>BILAL :</b> <span id="bilal-beranda">....</span><br>
+      <b>MUADZIN :</b> <span id="muadzin-beranda">....</span>
+    </p>
+  </div>
+  <div class="white-card">
+    <h3>👥 Struktur Pengurus RW 05</h3>
+    <p>Bos Admin • Ketua RW 05 • Ketua RT 01/05 - 07/05 • Humas RT 01/05 - 07/05 • Ketua DKM & Pengajian • Tokoh Masyarakat</p>
+    <button class="btn" onclick="showPage('pengurus')">Lihat Struktur Pengurus 👇</button>
+  </div>
+</div>
+
+<!-- PENGAJIAN -->
+<div id="page-pengajian" class="page">
+  <div class="card">
+    <div class="icon">🕌</div>
+    <div><h3>Pengajian Rutin Malam Jumat</h3><p>Ba'da Isya • Masjid Al-Huda</p></div>
+  </div>
+
+  <div class="dark-card">
+    <h3>🧕 Petugas Jum'at Hari Ini</h3>
+    <p>
+      <b>Tanggal : </b><span id="tanggal-jumat">....</span><br><br>
+      <b>IMAM :</b> <span id="imam">....</span><br>
+      <b>KHOTIB :</b> <span id="khotib">....</span><br>
+      <b>BILAL :</b> <span id="bilal">....</span><br>
+      <b>MUADZIN :</b> <span id="muadzin">....</span>
+    </p>
+    <p style="font-size:11px;color:#e8c9ff">Masjid Al-Huda • RW 05 Cilebut Barat</p>
+  </div>
+
+  <div class="white-card">
+    <h3>✏️ Ganti Petugas Jum'at (Bos Admin)</h3>
+    <label style="color:#333">Tanggal</label><input id="in-tanggal" placeholder="Contoh: Jumat, 14 November 2026">
+    <label style="color:#333">IMAM</label><input id="in-imam" placeholder="Nama Imam">
+    <label style="color:#333">KHOTIB</label><input id="in-khotib" placeholder="Nama Khotib">
+    <label style="color:#333">BILAL</label><input id="in-bilal" placeholder="Nama Bilal">
+    <label style="color:#333">MUADZIN</label><input id="in-muadzin" placeholder="Nama Muadzin">
+    <button class="btn btn-green" onclick="simpanPetugas()">Simpan Petugas Jum'at</button>
+  </div>
+
+  <div class="white-card"><h3>📅 Pengajian Bulanan RW 05</h3><p>Setiap awal bulan</p></div>
+  <div class="white-card"><h3>📅 Jadwal Pengajian RW 05</h3><p>• Senin: Pengajian Ibu-ibu RT 01/05<br>• Rabu: Pengajian Bapak-bapak<br>• Jumat Malam: Pengajian Rutin - Masjid Al-Huda 19:30 WIB<br>• Minggu Pagi: Pengajian Anak</p></div>
+</div>
+
+<!-- PENGURUS -->
+<div id="page-pengurus" class="page">
+  <div class="white-card"><h3>👑 BOS ADMIN</h3><div class="pengurus-item"><div class="avatar">👑</div><div><b>Bos Ampeg</b><span>Bos Admin - Pengelola Aplikasi</span></div></div></div>
+  <div class="white-card"><h3>👤 KETUA RW 05 CILEBUT BARAT</h3><div class="pengurus-item"><div class="avatar">👤</div><div><b>Nama Ketua RW 05</b><span>Ketua RW 05 Cilebut Barat</span></div></div></div>
+  <div class="section">🏠 Ketua RT 01/05 - 07/05</div>
+  <div class="white-card">
+    <div class="pengurus-item"><div class="avatar y">🏠</div><div><b>Ketua RT 01/05</b><span>Nama Ketua RT 01/05</span></div></div>
+    <div class="pengurus-item"><div class="avatar y">🏠</div><div><b>Ketua RT 02/05</b><span>Nama Ketua RT 02/05</span></div></div>
+    <div class="pengurus-item"><div class="avatar y">🏠</div><div><b>Ketua RT 03/05</b><span>Nama Ketua RT 03/05</span></div></div>
+    <div class="pengurus-item"><div class="avatar y">🏠</div><div><b>Ketua RT 04/05</b><span>Nama Ketua RT 04/05</span></div></div>
+    <div class="pengurus-item"><div class="avatar y">🏠</div><div><b>Ketua RT 05/05</b><span>Nama Ketua RT 05/05</span></div></div>
+    <div class="pengurus-item"><div class="avatar y">🏠</div><div><b>Ketua RT 06/05</b><span>Nama Ketua RT 06/05</span></div></div>
+    <div class="pengurus-item"><div class="avatar y">🏠</div><div><b>Ketua RT 07/05</b><span>Nama Ketua RT 07/05</span></div></div>
+  </div>
+  <div class="section">📢 Humas RT 01/05 - 07/05</div>
+  <div class="white-card">
+    <div class="pengurus-item"><div class="avatar b">📢</div><div><b>Humas RT 01/05</b><span>Nama Humas RT 01/05</span></div></div>
+    <div class="pengurus-item"><div class="avatar b">📢</div><div><b>Humas RT 02/05</b><span>Nama Humas RT 02/05</span></div></div>
+    <div class="pengurus-item"><div class="avatar b">📢</div><div><b>Humas RT 03/05</b><span>Nama Humas RT 03/05</span></div></div>
+    <div class="pengurus-item"><div class="avatar b">📢</div><div><b>Humas RT 04/05</b><span>Nama Humas RT 04/05</span></div></div>
+    <div class="pengurus-item"><div class="avatar b">📢</div><div><b>Humas RT 05/05</b><span>Nama Humas RT 05/05</span></div></div>
+    <div class="pengurus-item"><div class="avatar b">📢</div><div><b>Humas RT 06/05</b><span>Nama Humas RT 06/05</span></div></div>
+    <div class="pengurus-item"><div class="avatar b">📢</div><div><b>Humas RT 07/05</b><span>Nama Humas RT 07/05</span></div></div>
+  </div>
+  <div class="section">🕌 Ketua DKM & Ketua Pengajian</div>
+  <div class="white-card">
+    <div class="pengurus-item"><div class="avatar">🕌</div><div><b>Ketua DKM</b><span>Nama Ketua DKM</span></div></div>
+    <div class="pengurus-item"><div class="avatar">📖</div><div><b>Ketua Pengajian</b><span>Nama Ketua Pengajian</span></div></div>
+  </div>
+  <div class="section">🤝 Tokoh Masyarakat</div>
+  <div class="white-card">
+    <div class="pengurus-item"><div class="avatar">🤝</div><div><b>Tokoh Masyarakat 1</b><span>RW 05 Cilebut Barat</span></div></div>
+    <div class="pengurus-item"><div class="avatar">🤝</div><div><b>Tokoh Masyarakat 2</b><span>RW 05 Cilebut Barat</span></div></div>
+    <div class="pengurus-item"><div class="avatar">🤝</div><div><b>Tokoh Masyarakat 3</b><span>RW 05 Cilebut Barat</span></div></div>
+  </div>
+  <button class="btn" onclick="showPage('beranda')">← Kembali ke Beranda</button>
+</div>
+
+<!-- LAPOR -->
+<div id="page-lapor" class="page">
+  <div class="white-card"><h3>💬 Lapor Warga RW 05</h3>
+    <label style="color:#333">Nama</label><input id="l-nama" placeholder="Nama Warga">
+    <label style="color:#333">RT / RW</label>
+    <select id="l-rt"><option>RT 01/05</option><option>RT 02/05</option><option>RT 03/05</option><option>RT 04/05</option><option>RT 05/05</option><option>RT 06/05</option><option>RT 07/05</option></select>
+    <label style="color:#333">Laporan</label><textarea id="l-isi" rows="4" placeholder="Tulis laporan Bos Ampeg..."></textarea>
+    <button class="btn btn-green" onclick="alert('Laporan terkirim Bos Ampeg! Menunggu ACC Bos RW 05')">Kirim Laporan</button>
+    <p style="margin-top:8px;font-size:12px;color:#888">⏳ Harus ACC Bos RW 05 dulu baru tampil di Beranda Bos Ampeg</p>
+  </div>
+</div>
+
+<!-- PROFIL -->
+<div id="page-profil" class="page">
+  <div class="white-card"><h3>👤 Profil Warga RW 05</h3>
+    <label style="color:#333">Nama Warga</label><input id="nama" placeholder="Contoh: Budi Santoso">
+    <label style="color:#333">RT / RW</label>
+    <select id="rt"><option>RT 01/05</option><option>RT 02/05</option><option>RT 03/05</option><option>RT 04/05</option><option>RT 05/05</option><option>RT 06/05</option><option>RT 07/05</option></select>
+    <label style="color:#333">RW</label><input value="RW 05 Cilebut Barat" disabled>
+    <button class="btn btn-green" onclick="simpanProfil()">Simpan Profil</button>
+    <p id="profil-preview" style="margin-top:10px;color:#666;font-size:13px">Belum diisi Bos Ampeg</p>
+  </div>
+</div>
+
+</div>
+
+<div class="nav">
+  <button class="active" onclick="showPage('beranda',this)"><span>🏠</span>Beranda</button>
+  <button onclick="showPage('pengajian',this)"><span>📖</span>Pengajian</button>
+  <button onclick="showPage('lapor',this)"><span>💬</span>Lapor</button>
+  <button onclick="showPage('profil',this)"><span>👤</span>Profil</button>
+</div>
+
+<script>
+function showPage(id,btn){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  if(btn){document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');}
+  window.scrollTo(0,0);
+}
+function simpanProfil(){
+  const nama=document.getElementById('nama').value;
+  const rt=document.getElementById('rt').value;
+  if(!nama){alert('Isi nama dulu Bos Ampeg!');return;}
+  localStorage.setItem('bosampeg_nama',nama);localStorage.setItem('bosampeg_rt',rt);
+  document.getElementById('profil-preview').innerText=nama+' - '+rt+' - RW 05 Cilebut Barat';
+  alert('Tersimpan Bos Ampeg! '+nama+' - '+rt);showPage('beranda');
+}
+function simpanPetugas(){
+  const t=document.getElementById('in-tanggal').value;
+  const i=document.getElementById('in-imam').value;
+  const k=document.getElementById('in-khotib').value;
+  const b=document.getElementById('in-bilal').value;
+  const m=document.getElementById('in-muadzin').value;
+  if(t){localStorage.setItem('jumat_tanggal',t);document.getElementById('tanggal-jumat').innerText=t;document.getElementById('tanggal-jumat-beranda').innerText=t;}
+  if(i){localStorage.setItem('jumat_imam',i);document.getElementById('imam').innerText=i;document.getElementById('imam-beranda').innerText=i;}
+  if(k){localStorage.setItem('jumat_khotib',k);document.getElementById('khotib').innerText=k;document.getElementById('khotib-beranda').innerText=k;}
+  if(b){localStorage.setItem('jumat_bilal',b);document.getElementById('bilal').innerText=b;document.getElementById('bilal-beranda').innerText=b;}
+  if(m){localStorage.setItem('jumat_muadzin',m);document.getElementById('muadzin').innerText=m;document.getElementById('muadzin-beranda').innerText=m;}
+  alert('Tersimpan Bos Ampeg! Petugas Jumat udah ke-update!');
+}
+// Tanggal khusus hari Jum'at Bos Ampeg
+const hari=['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'];
+const bulan=['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+const d=new Date();
+const tglOtomatis=hari[d.getDay()]+', '+d.getDate()+' '+bulan[d.getMonth()]+' '+d.getFullYear();
+const savedTgl=localStorage.getItem('jumat_tanggal')||tglOtomatis;
+document.getElementById('tanggal-jumat').innerText=savedTgl;
+document.getElementById('tanggal-jumat-beranda').innerText=savedTgl;
+document.getElementById('imam').innerText=localStorage.getItem('jumat_imam')||'....';
+document.getElementById('imam-beranda').innerText=localStorage.getItem('jumat_imam')||'....';
+document.getElementById('khotib').innerText=localStorage.getItem('jumat_khotib')||'....';
+document.getElementById('khotib-beranda').innerText=localStorage.getItem('jumat_khotib')||'....';
+document.getElementById('bilal').innerText=localStorage.getItem('jumat_bilal')||'....';
+document.getElementById('bilal-beranda').innerText=localStorage.getItem('jumat_bilal')||'....';
+document.getElementById('muadzin').innerText=localStorage.getItem('jumat_muadzin')||'....';
+document.getElementById('muadzin-beranda').innerText=localStorage.getItem('jumat_muadzin')||'....';
+const n=localStorage.getItem('bosampeg_nama');
+if(n){document.getElementById('nama').value=n;document.getElementById('rt').value=localStorage.getItem('bosampeg_rt');document.getElementById('profil-preview').innerText=n+' - '+localStorage.getItem('bosampeg_rt');}
+</script>
+</body>
+</html>
